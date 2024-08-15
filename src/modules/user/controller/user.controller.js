@@ -158,7 +158,13 @@ exports.userLogin = async(req, res) => {
         return res.status(200).json({
             message: 'User logged in successfully',
             token,
-            user
+            user: {
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+                phoneNumber: user.phoneNumber,
+                picture: user.picture
+            }
         });
     } catch (error) {
         return res.status(500).json({

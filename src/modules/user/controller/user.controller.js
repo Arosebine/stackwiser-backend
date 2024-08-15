@@ -57,8 +57,13 @@ exports.signUp = async (req, res, next) => {
     });
     return res.status(201).json({
       message: 'User created',
-      user: newUser,
-      token
+      user: {
+        firstName: newUser.firstName,
+        lastName: newUser.lastName,
+        email: newUser.email,
+        phoneNumber: newUser.phoneNumber,
+        picture: newUser.picture
+      }
     });
   } catch (error) {
     next(error);
@@ -107,7 +112,13 @@ exports.emailVerify = async(req, res, next) => {
         });
         return res.status(200).json({
             message: 'User verified successfully',
-            existingUser
+            user: {
+                firstName: existingUser.firstName,
+                lastName: existingUser.lastName,
+                email: existingUser.email,
+                phoneNumber: existingUser.phoneNumber,
+                picture: existingUser.picture
+            }
         });
     } catch (error) {
        next(error);

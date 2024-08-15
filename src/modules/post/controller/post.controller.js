@@ -223,7 +223,8 @@ exports.createPost = async (req, res, next) => {
         searchCriteria.push({ content: new RegExp(content, "i") });
       }
   
-      const posts = await Post.find({ $or: searchCriteria });
+      const posts = await Post.find({ $or: searchCriteria })
+      .populate("author", "firstName lastName");
       if(!posts){
         return res.status(404).json({ message: 'No criteria found'})
       }

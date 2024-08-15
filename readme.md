@@ -37,3 +37,4 @@ for the API endpoints, please refer to the documentation link above.
 9. SMTP_FROM_EMAIL=stackwiser@yopmail.com
 
 
+# `Hosted Link:` https://stackwiser-backend.onrender.com

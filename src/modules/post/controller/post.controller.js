@@ -21,7 +21,7 @@ exports.createPost = async (req, res, next) => {
         const post = await Post.create({
           title,
           content,
-          authorId: user._id
+          author: user._id
         });
   
         return res.status(201).json({
@@ -267,7 +267,6 @@ exports.createPost = async (req, res, next) => {
       }
   
       const authorIds = userAuthor.map(user => user._id);
-      console.log(authorIds);
   
       const posts = await Post.find({ authorIds })
         .populate('author', 'firstName lastName')

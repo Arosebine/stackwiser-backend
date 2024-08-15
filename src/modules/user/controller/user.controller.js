@@ -150,7 +150,7 @@ exports.userLogin = async(req, res) => {
             user
         });
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             message: 'Error while logging in',
             error: error.message
         });

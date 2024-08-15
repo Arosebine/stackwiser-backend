@@ -27,15 +27,13 @@ for the API endpoints, please refer to the documentation link above.
 
 # `Environment Variables:`
 1. `PORT=7070`
-2. `MongoDB_URL=mongodb+srv://handleBar:<password>@handlebar.f04oun0.mongodb.net/
+2. `DATABASE_URL_PROD=mongodb+srv://handleBar:<password>@handlebar.f04oun0.mongodb.net/
 3. PORT=7070
 4. JWT_SECRET=eyhenw937w$%$89898989
-5. CLOUD_NAME=
-6. CLOUD_KEY=
-7. CLOUD_SECRET=
-8. GMAIL_ADDRESS=smtp.gmail.com
-9. EMAIL= arebine@gmail.com
-10. PASSWORD=
-11. SMTP_PORT=465
+5. SMTP_HOST=smtp.gmail.com
+6. SMTP_EMAIL= arebine@gmail.com
+7. SMTP_PASSWORD=
+8. SMTP_PORT=465
+9. SMTP_FROM_EMAIL=stackwiser@yopmail.com
 
 

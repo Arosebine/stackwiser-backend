@@ -56,8 +56,8 @@ exports.getComments = async (req, res, next) => {
       }
   
       // Pagination
-      const page = parseInt(req.query.page) || 1;  // Default to page 1
-      const limit = parseInt(req.query.limit) || 10;  // Default to 10 comments per page
+      const page = parseInt(req.query.page) || 1; 
+      const limit = parseInt(req.query.limit) || 10; 
       const skip = (page - 1) * limit;
   
       const comments = await Comment.find({ postId })
